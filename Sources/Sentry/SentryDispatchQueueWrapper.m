@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 {
     self = [super init];
     if (self) {
-        self.queue = dispatch_queue_create("sentry-dispatch", DISPATCH_QUEUE_SERIAL);
+        self.queue = dispatch_queue_create("sentry-dispatch", DISPATCH_QUEUE_SERIAL_WITH_AUTORELEASE_POOL);
     }
     return self;
 }
